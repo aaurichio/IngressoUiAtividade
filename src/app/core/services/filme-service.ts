@@ -21,7 +21,7 @@ export class SessaoService {
   private apiUrl = 'http://localhost:8080/sessoes';
   private http = inject(HttpClient);
 
-  findFilme(): Observable<Sessao[]>{
+  findByFilme(): Observable<Sessao[]>{
     return this.http.get<Sessao[]>(this.apiUrl);
   }
 }
